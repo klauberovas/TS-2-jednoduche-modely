@@ -35,7 +35,7 @@ interface Color {
 }
 
 const red: Color = {
-  red: 0.255,
+  red: 1,
   green: 0,
   blue: 0,
 };
@@ -43,7 +43,7 @@ const red: Color = {
 const blue: Color = {
   red: 0,
   green: 0,
-  blue: 0.255,
+  blue: 1,
 };
 
 console.log('Červená:', red);
@@ -55,33 +55,32 @@ type ColorName = 'yellow' | 'pink' | 'orange';
 const colorFromName = (value: ColorName): Color | undefined => {
   if (value === 'yellow') {
     const yellow: Color = {
-      red: 0.255,
-      green: 0.255,
+      red: 255,
+      green: 255,
       blue: 0,
     };
     return yellow;
-  }
-  if (value === 'orange') {
+  } else if (value === 'orange') {
     const orange: Color = {
-      red: 0.255,
-      green: 0.165,
+      red: 255,
+      green: 165,
       blue: 0,
     };
     return orange;
-  }
-  if (value === 'pink') {
+  } else if (value === 'pink') {
     const pink: Color = {
-      red: 0.255,
-      green: 0.192,
-      blue: 0.203,
+      red: 255,
+      green: 192,
+      blue: 203,
     };
     return pink;
+  } else {
+    console.error('neznámá barva:', value);
+    return undefined;
   }
 };
 console.log('Žlutá:', colorFromName('yellow'));
-
 console.log('Růžová:', colorFromName('pink'));
-
 console.log('Oranžová:', colorFromName('orange'));
 
 //-------------------------------------------------------------

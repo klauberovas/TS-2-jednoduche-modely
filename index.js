@@ -13,41 +13,45 @@ var formatTime = function (value) {
 };
 console.log(formatTime(time));
 var red = {
-    red: 0.255,
+    red: 1,
     green: 0,
     blue: 0,
 };
 var blue = {
     red: 0,
     green: 0,
-    blue: 0.255,
+    blue: 1,
 };
 console.log('Červená:', red);
 console.log('Modrá:', blue);
 var colorFromName = function (value) {
     if (value === 'yellow') {
         var yellow = {
-            red: 0.255,
-            green: 0.255,
+            red: 255,
+            green: 255,
             blue: 0,
         };
         return yellow;
     }
-    if (value === 'orange') {
+    else if (value === 'orange') {
         var orange = {
-            red: 0.255,
-            green: 0.165,
+            red: 255,
+            green: 165,
             blue: 0,
         };
         return orange;
     }
-    if (value === 'pink') {
+    else if (value === 'pink') {
         var pink = {
-            red: 0.255,
-            green: 0.192,
-            blue: 0.203,
+            red: 255,
+            green: 192,
+            blue: 203,
         };
         return pink;
+    }
+    else {
+        console.error('neznámá barva:', value);
+        return undefined;
     }
 };
 console.log('Žlutá:', colorFromName('yellow'));
