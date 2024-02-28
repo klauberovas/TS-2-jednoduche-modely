@@ -2,8 +2,27 @@ console.log('Hello world');
 
 // Čas
 // Vytvořte typ Time pro reprezentaci času v hodinách, minutách a vteřinách. Použijte pro to objekt s třemi číselnými vlastnostmi hours, minutes a seconds. Vytvořte objekt reprezentující čas 12:34:56 a vypište ho pomocí console.log.
-// Napište funkci formatTime, která bude mít parametr typu Time a vrátí řetězec s formátovaným časem ve tvaru HH:MM:SS například "12:34:56". Vyzkoušejte funkci na několika různých časech a výsledky vypište pomocí console.log.
 
+interface Time {
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
+const time: Time = {
+  hours: 12,
+  minutes: 34,
+  seconds: 56,
+};
+const { hours, minutes, seconds } = time;
+console.log(`${hours}:${minutes}:${seconds}`);
+
+// Napište funkci formatTime, která bude mít parametr typu Time a vrátí řetězec s formátovaným časem ve tvaru HH:MM:SS například "12:34:56". Vyzkoušejte funkci na několika různých časech a výsledky vypište pomocí console.log.
+const formatTime = (value: Time): string => {
+  const { hours, minutes, seconds } = value;
+  return `${hours}:${minutes}:${seconds}`;
+};
+console.log(formatTime(time));
 //-------------------------------------------------------------
 
 // Barvy

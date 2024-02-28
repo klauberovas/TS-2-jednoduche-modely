@@ -1,7 +1,17 @@
 console.log('Hello world');
-// Čas
-// Vytvořte typ Time pro reprezentaci času v hodinách, minutách a vteřinách. Použijte pro to objekt s třemi číselnými vlastnostmi hours, minutes a seconds. Vytvořte objekt reprezentující čas 12:34:56 a vypište ho pomocí console.log.
+var time = {
+    hours: 12,
+    minutes: 34,
+    seconds: 56,
+};
+var hours = time.hours, minutes = time.minutes, seconds = time.seconds;
+console.log("".concat(hours, ":").concat(minutes, ":").concat(seconds));
 // Napište funkci formatTime, která bude mít parametr typu Time a vrátí řetězec s formátovaným časem ve tvaru HH:MM:SS například "12:34:56". Vyzkoušejte funkci na několika různých časech a výsledky vypište pomocí console.log.
+var formatTime = function (value) {
+    var hours = value.hours, minutes = value.minutes, seconds = value.seconds;
+    return "".concat(hours, ":").concat(minutes, ":").concat(seconds);
+};
+console.log(formatTime(time));
 //-------------------------------------------------------------
 // Barvy
 // Vytvořte typ Color, který bude představovat barvu pomocí tří číselných vlastností red, green a blue. Každá barevná složka bude mít hodnotu jako desetinné číslo mezi 0 a 1. Vytvořte objekt reprezentující sytě červenou a sytě modrou a vypište ji pomocí console.log.
