@@ -12,10 +12,47 @@ var formatTime = function (value) {
     return "".concat(hours, ":").concat(minutes, ":").concat(seconds);
 };
 console.log(formatTime(time));
-//-------------------------------------------------------------
-// Barvy
-// Vytvořte typ Color, který bude představovat barvu pomocí tří číselných vlastností red, green a blue. Každá barevná složka bude mít hodnotu jako desetinné číslo mezi 0 a 1. Vytvořte objekt reprezentující sytě červenou a sytě modrou a vypište ji pomocí console.log.
-// Vytvořte výčtový typ ColorName pro základní barvy jako yellow, pink, orange apod. Vytvořte funkci colorFromName, která bude mít parametr typu ColorName a vrátí objekt typu Color s odpovídajícími hodnotami. Vyzkoušejte funkci na několika různých barvách a výsledky vypište pomocí console.log.
+var red = {
+    red: 0.255,
+    green: 0,
+    blue: 0,
+};
+var blue = {
+    red: 0,
+    green: 0,
+    blue: 0.255,
+};
+console.log('Červená:', red);
+console.log('Modrá:', blue);
+var colorFromName = function (value) {
+    if (value === 'yellow') {
+        var yellow = {
+            red: 0.255,
+            green: 0.255,
+            blue: 0,
+        };
+        return yellow;
+    }
+    if (value === 'orange') {
+        var orange = {
+            red: 0.255,
+            green: 0.165,
+            blue: 0,
+        };
+        return orange;
+    }
+    if (value === 'pink') {
+        var pink = {
+            red: 0.255,
+            green: 0.192,
+            blue: 0.203,
+        };
+        return pink;
+    }
+};
+console.log('Žlutá:', colorFromName('yellow'));
+console.log('Růžová:', colorFromName('pink'));
+console.log('Oranžová:', colorFromName('orange'));
 //-------------------------------------------------------------
 // Adresa
 // Vytvořte typ Address pro reprezentaci adresy tak, aby na tuto addresu bylo možné doručit balík například pomocí České pošty nebo Zásilkovny. Rozmyslete si, jaké vlastnosti má adresa mít, jakého mají být typu a které z nich jsou nepovinné. Vytvořte objekt reprezentující adresu a vypište ji pomocí console.log.
