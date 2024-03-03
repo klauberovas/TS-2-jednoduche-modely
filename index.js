@@ -57,6 +57,18 @@ var colorFromName = function (value) {
 console.log('Žlutá:', colorFromName('yellow'));
 console.log('Růžová:', colorFromName('pink'));
 console.log('Oranžová:', colorFromName('orange'));
-//-------------------------------------------------------------
-// Adresa
-// Vytvořte typ Address pro reprezentaci adresy tak, aby na tuto addresu bylo možné doručit balík například pomocí České pošty nebo Zásilkovny. Rozmyslete si, jaké vlastnosti má adresa mít, jakého mají být typu a které z nich jsou nepovinné. Vytvořte objekt reprezentující adresu a vypište ji pomocí console.log.
+var zasilkovna = {
+    street: 'Kollárova',
+    unitNumber: 12,
+    zipCode: 30100,
+    city: 'Plzeň',
+    phoneNumber: +420737777333,
+};
+var ceskaPosta = {
+    street: 'Pražská',
+    unitNumber: 5,
+    zipCode: 31000,
+    city: 'Praha',
+};
+console.log('Zásilkovna:', zasilkovna);
+console.log('Česká pošta:', ceskaPosta);
