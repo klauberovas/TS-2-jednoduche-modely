@@ -3,11 +3,11 @@ console.log('Hello world');
 // Čas
 // Vytvořte typ Time pro reprezentaci času v hodinách, minutách a vteřinách. Použijte pro to objekt s třemi číselnými vlastnostmi hours, minutes a seconds. Vytvořte objekt reprezentující čas 12:34:56 a vypište ho pomocí console.log.
 
-interface Time {
+type Time = {
   hours: number;
   minutes: number;
   seconds: number;
-}
+};
 
 const time: Time = {
   hours: 12,
@@ -28,11 +28,11 @@ console.log(formatTime(time));
 // Barvy
 // Vytvořte typ Color, který bude představovat barvu pomocí tří číselných vlastností red, green a blue. Každá barevná složka bude mít hodnotu jako desetinné číslo mezi 0 a 1. Vytvořte objekt reprezentující sytě červenou a sytě modrou a vypište ji pomocí console.log.
 
-interface Color {
+type Color = {
   red: number;
   green: number;
   blue: number;
-}
+};
 
 const red: Color = {
   red: 1,
@@ -88,13 +88,13 @@ console.log('Oranžová:', colorFromName('orange'));
 // Adresa
 // Vytvořte typ Address pro reprezentaci adresy tak, aby na tuto addresu bylo možné doručit balík například pomocí České pošty nebo Zásilkovny. Rozmyslete si, jaké vlastnosti má adresa mít, jakého mají být typu a které z nich jsou nepovinné. Vytvořte objekt reprezentující adresu a vypište ji pomocí console.log.
 
-interface Address {
+type Address = {
   street: string;
   unitNumber: number;
   zipCode: number | string;
   city: string;
   phoneNumber?: number;
-}
+};
 
 const zasilkovna: Address = {
   street: 'Kollárova',
